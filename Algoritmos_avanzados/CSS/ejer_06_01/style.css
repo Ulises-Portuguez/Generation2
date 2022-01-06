@@ -1,0 +1,71 @@
+body {
+  font: Verdana;
+  font-size: 1.5em;
+}
+
+h3 {
+  color: blue;
+  text-align: center;
+}
+
+#main {
+  background-color: whitesmoke;
+  align-content: center;
+  margin: 30px;
+  padding: 30px;
+}
+
+.alert {
+  color: #72353d;
+  background-color: #ead2d5;
+}
+
+@keyframes rojo-azul {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+@keyframes azul-rojo {
+  0% {
+    background-color: blue;
+  }
+  50% {
+    background-color: red;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+
+#div1 {
+  height: 200px;
+  width: 40%;
+  background-color: blue;
+  padding: 20px;
+  border-radius: 50px;
+  border: solid black 1px;
+  transform: rotate(90deg);
+  animation-name: azul-rojo;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+#div2 {
+  height: 200px;
+  width: 40%;
+  background-color: red;
+  padding: 20px;
+  border-radius: 50px;
+  border: solid black 1px;
+  transform: rotate(90deg);
+  animation-name: rojo-azul;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
