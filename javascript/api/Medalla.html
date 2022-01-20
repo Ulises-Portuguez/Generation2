@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id='elemento'></div>
+    <br>
+    <div id='elemento2'></div>
+    <br>
+    <div id='elemento3'></div>
+    <br>
+
+    <script>
+
+        fetch('https://pokeapi.co/api/v2/pokemon/225/')
+            .then(respuesta => respuesta.json())
+            .then(pokemon => {
+                let element = document.getElementById('elemento')
+                element.innerHTML = `<p> Nombre: ${pokemon.name}<p>
+                <img src='${pokemon.sprites.front_default}'><p> Altura: ${pokemon.height}<p><p> Peso: ${pokemon.weight}<p>`;
+                console.log(pokemon)
+            })
+            .catch(err => console.log(err))
+
+        fetch('https://pokeapi.co/api/v2/pokemon/124/')
+            .then(response => response.json())
+            .then(pokemon2 => {
+                let element2 = document.getElementById('elemento2')
+                element2.innerHTML = `<p> Nombre: ${pokemon2.name}<p>
+                <img src='${pokemon2.sprites.front_default}'><p> Altura: ${pokemon2.height}<p><p> Peso: ${pokemon2.weight}<p>`;
+                console.log(pokemon2)
+            })
+            .catch(err => console.log(err))
+
+
+        fetch('https://pokeapi.co/api/v2/pokemon/135/')
+            .then(response => response.json())
+            .then(pokemon3 => {
+                let element3 = document.getElementById('elemento3')
+                element3.innerHTML = `<p> Nombre: ${pokemon3.name}<p>
+                <img src='${pokemon3.sprites.front_default}'><p> Altura: ${pokemon3.height}<p><p> Peso: ${pokemon3.weight}<p>`;
+                console.log(pokemon3)
+            })
+            .catch(err => console.log(err))
+    </script>
+</body>
