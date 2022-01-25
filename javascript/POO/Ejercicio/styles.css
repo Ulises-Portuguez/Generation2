@@ -1,0 +1,29 @@
+body {
+    background-image: url("images/Some-books-bookcase_2880x1800.jpg");
+    background-size: 10;
+  
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+  
+    z-index: -1;
+  }
+
+
+  p {
+font-style: italic;
+color: beige ;
+font-size: 25px;
+
+  }
+
+  h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ 
+    font-size:75px;
+  }
+
+ button{
+   color: #051c3d;
+   
+ }
